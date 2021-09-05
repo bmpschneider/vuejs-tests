@@ -27,7 +27,7 @@
 
         <div class="login-form">
           <sign-in @do-sign-in="doSignIn" />
-          <sign-up />
+          <sign-up @do-sign-up="doSignUp"/>
         </div>
       </div>
     </div>
@@ -51,11 +51,15 @@ export default {
   },
   methods: {
     navigate() {
-      this.$bus.$emit('navigate', this.navigation)
+      this.$bus.$emit("navigate", this.navigation);
     },
     doSignIn(obj) {
       //API
-      window.console.log(obj)
+      window.console.log(obj);
+    },
+    doSignUp(obj) {
+      //API
+      window.console.log(obj);
     },
   },
 };

@@ -77,6 +77,8 @@ export default {
     submit() {
       if (!this.$v.$invalid) {
         this.$emit("do-sign-in", { ...this.$data });
+      } else {
+          this.$v.$touch()
       }
     },
     reset(selected) {
